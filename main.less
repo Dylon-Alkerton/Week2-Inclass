@@ -1,0 +1,97 @@
+@blue: #3498db;
+@basefont: 21px;
+
+.square(@size){
+	width:@size;
+	height:@size;
+}
+
+
+.roundedbutton {
+	border-radius: 10px;
+	background: @blue;
+	color: #fff;
+}
+
+.fontstyle(@fontcolor) {
+	font-family:"Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+	font-size: @basefont;
+	color: @fontcolor;
+	font-weight: 300;
+	text-decoration: underline;
+	line-height: 42px; 
+}
+
+h1 {
+	font-size: @basefont * 3;
+}
+
+h2{
+	font-size: @basefont * 1.5;
+}
+
+p{
+	font-size: @basefont - 3;
+}
+body {
+	font-size: @basefont;
+	.fontstyle(#e67e22); 
+}
+
+
+header{
+	background-color: darken(#ccc, 30%);
+	width: 800px;
+	nav{
+		background-color: red;
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li{
+			margin-right: 15px;
+			display: inline;
+			&:last-child {
+				margin-right: 0px;
+			}
+			&:nth-child(2) {
+			color: red;
+				}
+			}
+		}
+	}
+}
+
+a{
+	color: #000;
+	&:hover {
+	text-decoration: none;
+	}
+}
+
+section {
+	width: 800px;
+	background-color: grey;
+	article {
+		header{
+			width:400px;
+			h2{
+				font-size: 32px;
+
+			}
+		}
+		p{
+			button[type="submit"] {
+				.roundedbutton;
+				padding: 5px 2px;
+			}
+		}
+	}
+}
+
+footer {
+	.mysquare {
+		.square(45px);
+		background-color: #000;
+	}
+}
